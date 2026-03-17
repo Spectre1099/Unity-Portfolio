@@ -7,21 +7,21 @@ const skillGroups = [
     title: "Programming",
     skills: [
       { name: "C#", detail: "4+ Years" },
+      { name: "Lua", detail: "Defold" },
       { name: "OOP & SOLID", detail: "Advanced" },
       { name: "Design Patterns", detail: "State Machine, Observer, Command" },
       { name: "Data Structures", detail: "Spatial Hashing, BSP Trees" },
-      { name: "Performance Optimization", detail: "GC, Memory, CPU Profiling" },
     ],
   },
   {
     icon: Gamepad2,
     title: "Game Development",
     skills: [
-      { name: "Unity Engine", detail: "4+ Years · Shipped 6 Titles" },
-      { name: "Multiplayer Netcode", detail: "Photon, Mirror, Fusion" },
-      { name: "Physics Systems", detail: "Custom Controllers, Raycasting" },
-      { name: "AI Systems", detail: "Behavior Trees, FSM, Pathfinding" },
-      { name: "Shader Programming", detail: "Shader Graph, HLSL Basics" },
+      { name: "Unity Engine", detail: "4+ Years - Shipped 6 Titles" },
+      { name: "Defold", detail: "Cross-Engine" },
+      { name: "Multiplayer Netcode", detail: "Photon, Fish, Fusion" },
+      { name: "Gameplay Systems", detail: "State Machines, Abilities" },
+      { name: "Performance Optimization", detail: "GC, Memory, CPU Profiling" },
     ],
   },
   {
@@ -30,9 +30,9 @@ const skillGroups = [
     skills: [
       { name: "Git & GitHub", detail: "Version Control, CI/CD" },
       { name: "Firebase", detail: "Analytics, Remote Config, Auth" },
+      { name: "PlayFab", detail: "Live Ops, Backend" },
       { name: "Photon Networking", detail: "PUN2, Fusion, Voice" },
       { name: "Addressables", detail: "Asset Bundles, Memory Mgmt" },
-      { name: "Cinemachine & Timeline", detail: "Camera, Cutscenes" },
     ],
   },
 ];

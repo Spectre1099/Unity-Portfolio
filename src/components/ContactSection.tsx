@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Github, Send } from "lucide-react";
+import { Mail, Linkedin, Github, Phone, Send } from "lucide-react";
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -36,13 +36,14 @@ const ContactSection = () => {
           >
             <p className="text-muted-foreground leading-relaxed">
               Open to freelance projects, full-time roles, and collaboration opportunities.
-              Let's build something great together.
+              Let us build something great together.
             </p>
             <div className="space-y-4">
               {[
-                { icon: Mail, label: "adeel.khan@email.com", href: "mailto:adeel.khan@email.com" },
-                { icon: Linkedin, label: "linkedin.com/in/adeelkhan", href: "#" },
-                { icon: Github, label: "github.com/adeelkhan", href: "#" },
+                { icon: Phone, label: "0320 0429141", href: "tel:+923200429141" },
+                { icon: Mail, label: "adeeel00744@gmail.com", href: "mailto:adeeel00744@gmail.com" },
+                { icon: Linkedin, label: "linkedin.com/in/m-adeelkhan", href: "https://www.linkedin.com/in/m-adeelkhan/" },
+                { icon: Github, label: "github.com/Balongi-Co", href: "https://github.com/Balongi-Co" },
               ].map((link) => (
                 <a
                   key={link.label}

@@ -42,16 +42,17 @@ const AboutSection = () => {
             className="lg:col-span-3 space-y-6"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Specializing in C# optimization and gameplay systems architecture with 4+ years
-              of professional Unity development. Focused on building performant, scalable game
-              systems — from custom physics controllers to lag-compensated multiplayer netcode.
+              Gameplay Programmer and Unity Developer with 4+ years of experience building
+              scalable gameplay systems for mobile and cross-platform games. Specialized in
+              gameplay programming, multiplayer systems, and performance optimization, with
+              a focus on clean, modular architectures that support complex features.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Every system I build is profiled, tested, and optimized. I approach game
-              development as engineering: measurable performance targets, clean architecture,
-              and maintainable code that scales with the project. My work spans multiplayer
-              shooters, mobile puzzlers, racing games, and RPGs — always with a focus on
-              the technical foundations that make great gameplay possible.
+              Experienced across casual, puzzle, simulation, racing, FPS, tower defense,
+              multiplayer, and PvP genres. I regularly work with C#, Unity systems,
+              networking integration, and production-ready game architecture designed for
+              long-term scalability. I enjoy solving challenging technical problems and I am
+              expanding into Defold and Lua to broaden cross-engine capabilities.
             </p>
           </motion.div>
 
