@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <script>
+      (function () {
+        var segment = "/mak.dev/";
+        var l = window.location;
+        var path = l.pathname;
+        if (path.startsWith(segment)) {
+          path = path.slice(segment.length);
+        }
+        var redirect =
+          l.origin +
+          segment +
+          "?/" +
+          encodeURIComponent(path + l.search + l.hash);
+        l.replace(redirect);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
