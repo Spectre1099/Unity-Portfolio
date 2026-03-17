@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Download, Mail } from "lucide-react";
+import { ArrowDown, Download, Mail, Linkedin, Github } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -39,7 +39,7 @@ const HeroSection = () => {
           Gameplay Programmer and Unity Developer with 4+ years of experience
           building scalable gameplay systems for mobile and cross-platform games.
           Specialized in multiplayer systems, performance optimization, and clean,
-          modular architectures across shipped titles with 500K+ combined downloads.
+          modular architectures.
         </motion.p>
 
         <motion.div
@@ -56,7 +56,9 @@ const HeroSection = () => {
             <ArrowDown size={16} strokeWidth={1.5} className="group-hover:translate-y-0.5 transition-transform" />
           </a>
           <a
-            href="#"
+            href="https://drive.google.com/file/d/1sm6wUx4F2p2Od7V5vAtncSnBTHN16fpm/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 surface-elevated rounded-xl font-medium text-sm text-foreground hover:bg-secondary transition-all active:translate-y-px"
           >
             <Download size={16} strokeWidth={1.5} />
@@ -71,17 +73,43 @@ const HeroSection = () => {
           </a>
         </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4, ease: [0.23, 1, 0.32, 1] }}
+          className="mt-8 flex flex-wrap gap-3"
+        >
+          <a
+            href="https://www.linkedin.com/in/m-adeelkhan/"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-secondary text-secondary-foreground hover:bg-primary/10 transition-all"
+          >
+            <Linkedin size={14} strokeWidth={1.5} />
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/Balongi-Co"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-secondary text-secondary-foreground hover:bg-primary/10 transition-all"
+          >
+            <Github size={14} strokeWidth={1.5} />
+            GitHub
+          </a>
+        </motion.div>
+
         {/* Stats */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-20 grid grid-cols-3 gap-8 max-w-lg"
+          className="mt-16 grid grid-cols-3 gap-8 max-w-lg"
         >
           {[
             { value: "4+", label: "Years Experience" },
-            { value: "6", label: "Shipped Titles" },
-            { value: "500K+", label: "Downloads" },
+            { value: "Multiplayer", label: "Systems Focus" },
+            { value: "Cross-Platform", label: "Mobile & PC" },
           ].map((stat) => (
             <div key={stat.label}>
               <div className="font-mono text-2xl font-semibold tabular-nums text-foreground">
