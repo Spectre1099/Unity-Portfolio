@@ -129,7 +129,7 @@ export const projects: Project[] = [
     description:
       "Rocket-powered cars meet fast soccer action with stunts, abilities, and competitive arenas.",
     image: rocketCar,
-    categories: ["Roleplaying", "Android"],
+    categories: ["Vehicle", "Android"],
     techStack: ["Unity", "C#", "Android"],
     role: "Unity Developer Intern",
     overview:
@@ -150,7 +150,7 @@ export const projects: Project[] = [
     description:
       "Explosive demolition action with monster trucks across stunt, race, and survival modes.",
     image: monsterTruck,
-    categories: ["Roleplaying", "Android"],
+    categories: ["Vehicle", "Android"],
     techStack: ["Unity", "C#", "Android"],
     role: "Unity Developer",
     overview:
