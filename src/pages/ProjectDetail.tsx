@@ -1,1 +1,195 @@
-import { useParams, Link } from "react-router-dom";import { motion } from "framer-motion";import { ArrowLeft, ExternalLink, Play } from "lucide-react";import { projects } from "@/data/projects";const ProjectDetail = () => {  const { id } = useParams();  const project = projects.find((p) => p.id === id);  if (!project) {    return (      <div className="min-h-screen flex items-center justify-center">        <div className="text-center">          <h1 className="text-2xl font-medium">Project not found</h1>          <Link to="/" className="text-primary mt-4 inline-block hover:underline">            <- Back to home          </Link>        </div>      </div>    );  }  return (    <div className="min-h-screen pt-20">      {/* Back nav */}      <div className="max-w-7xl mx-auto px-6 py-6">        <Link          to="/#projects"          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"        >          <ArrowLeft size={16} strokeWidth={1.5} />          Back to Projects        </Link>      </div>      {/* Banner */}      <motion.div        initial={{ opacity: 0, y: 20 }}        animate={{ opacity: 1, y: 0 }}        className="max-w-7xl mx-auto px-6"      >        <div className="relative aspect-video rounded-2xl overflow-hidden rim-light">          <img            src={project.image}            alt={project.title}            className="w-full h-full object-cover"          />          <div className="absolute inset-0 scanline-overlay opacity-30" />          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />          <div className="absolute bottom-0 left-0 right-0 p-8">            <div className="flex flex-wrap gap-2 mb-3">              {project.techStack.map((tech) => (                <span key={tech} className="font-mono text-[10px] uppercase tracking-widest text-primary bg-background/60 backdrop-blur-sm px-2 py-1 rounded">                  {tech}                </span>              ))}            </div>            <h1 className="text-4xl sm:text-5xl font-medium tracking-tighter">{project.title}</h1>            <p className="mt-2 font-mono text-sm text-muted-foreground">{project.role}</p>          </div>        </div>      </motion.div>      {/* Content */}      <div className="max-w-7xl mx-auto px-6 py-16">        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">          {/* Main content */}          <div className="lg:col-span-2 space-y-12">            <motion.section              initial={{ opacity: 0, y: 20 }}              animate={{ opacity: 1, y: 0 }}              transition={{ delay: 0.1 }}            >              <h2 className="font-mono text-xs uppercase tracking-[0.2em] font-semibold text-primary mb-4">                Overview              </h2>              <p className="text-muted-foreground leading-relaxed">{project.overview}</p>            </motion.section>            <motion.section              initial={{ opacity: 0, y: 20 }}              animate={{ opacity: 1, y: 0 }}              transition={{ delay: 0.2 }}            >              <h2 className="font-mono text-xs uppercase tracking-[0.2em] font-semibold text-primary mb-4">                My Contributions              </h2>              <ul className="space-y-3">                {project.contributions.map((c, i) => (                  <li key={i} className="flex items-start gap-3">                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />                    <span className="text-sm text-muted-foreground leading-relaxed">{c}</span>                  </li>                ))}              </ul>            </motion.section>            <motion.section              initial={{ opacity: 0, y: 20 }}              animate={{ opacity: 1, y: 0 }}              transition={{ delay: 0.3 }}            >              <h2 className="font-mono text-xs uppercase tracking-[0.2em] font-semibold text-primary mb-4">                Key Features              </h2>              <ul className="space-y-3">                {project.features.map((f, i) => (                  <li key={i} className="flex items-start gap-3">                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent shrink-0" />                    <span className="text-sm text-muted-foreground leading-relaxed">{f}</span>                  </li>                ))}              </ul>            </motion.section>            <motion.section              initial={{ opacity: 0, y: 20 }}              animate={{ opacity: 1, y: 0 }}              transition={{ delay: 0.4 }}            >              <h2 className="font-mono text-xs uppercase tracking-[0.2em] font-semibold text-primary mb-4">                Challenges & Solutions              </h2>              <ul className="space-y-3">                {project.challenges.map((c, i) => (                  <li key={i} className="flex items-start gap-3">                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-muted-foreground shrink-0" />                    <span className="text-sm text-muted-foreground leading-relaxed">{c}</span>                  </li>                ))}              </ul>            </motion.section>          </div>          {/* Sidebar */}          <motion.aside            initial={{ opacity: 0, x: 20 }}            animate={{ opacity: 1, x: 0 }}            transition={{ delay: 0.2 }}            className="space-y-6 lg:sticky lg:top-24 lg:self-start"          >            <div className="surface-elevated rounded-2xl p-6 rim-light space-y-6">              <div>                <h3 className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground/70 mb-2">                  Role                </h3>                <p className="text-sm font-medium text-foreground">{project.role}</p>              </div>              <div>                <h3 className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground/70 mb-2">                  Tech Stack                </h3>                <div className="flex flex-wrap gap-2">                  {project.techStack.map((tech) => (                    <span key={tech} className="px-2 py-1 bg-secondary rounded text-xs font-mono text-secondary-foreground">                      {tech}                    </span>                  ))}                </div>              </div>              <div>                <h3 className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground/70 mb-2">                  Categories                </h3>                <div className="flex flex-wrap gap-2">                  {project.categories.map((cat) => (                    <span key={cat} className="px-2 py-1 bg-primary/10 rounded text-xs font-mono text-primary">                      {cat}                    </span>                  ))}                </div>              </div>            </div>            <div className="flex flex-col gap-3">              <button className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent text-accent-foreground rounded-xl font-medium text-sm hover:brightness-110 active:translate-y-px transition-all">                <Play size={16} strokeWidth={1.5} />                Play / Download              </button>              <button className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 surface-elevated rim-light rounded-xl font-medium text-sm text-foreground hover:bg-secondary transition-all active:translate-y-px">                <ExternalLink size={16} strokeWidth={1.5} />                View Source              </button>            </div>          </motion.aside>        </div>      </div>    </div>  );};export default ProjectDetail;
+import { useParams, Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { ArrowLeft, ExternalLink, Play } from "lucide-react";
+import { projects } from "@/data/projects";
+
+const ProjectDetail = () => {
+  const { id } = useParams();
+  const project = projects.find((p) => p.id === id);
+
+  if (!project) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-medium">Project not found</h1>
+          <Link to="/" className="text-primary mt-4 inline-block hover:underline">
+            &larr; Back to home
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen pt-20">
+      {/* Back nav */}
+      <div className="max-w-7xl mx-auto px-6 py-6">
+        <Link
+          to="/#projects"
+          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+        >
+          <ArrowLeft size={16} strokeWidth={1.5} />
+          Back to Projects
+        </Link>
+      </div>
+
+      {/* Banner */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="max-w-7xl mx-auto px-6"
+      >
+        <div className="relative aspect-video rounded-2xl overflow-hidden rim-light">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 scanline-overlay opacity-30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-8">
+            <div className="flex flex-wrap gap-2 mb-3">
+              {project.techStack.map((tech) => (
+                <span
+                  key={tech}
+                  className="font-mono text-[10px] uppercase tracking-widest text-primary bg-background/60 backdrop-blur-sm px-2 py-1 rounded"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <h1 className="text-4xl sm:text-5xl font-medium tracking-tighter">{project.title}</h1>
+            <p className="mt-2 font-mono text-sm text-muted-foreground">{project.role}</p>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Content */}
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          {/* Main content */}
+          <div className="lg:col-span-2 space-y-12">
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+            >
+              <h2 className="font-mono text-xs uppercase tracking-[0.2em] font-semibold text-primary mb-4">
+                Overview
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">{project.overview}</p>
+            </motion.section>
+
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <h2 className="font-mono text-xs uppercase tracking-[0.2em] font-semibold text-primary mb-4">
+                My Contributions
+              </h2>
+              <ul className="space-y-3">
+                {project.contributions.map((c, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                    <span className="text-sm text-muted-foreground leading-relaxed">{c}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.section>
+
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+            >
+              <h2 className="font-mono text-xs uppercase tracking-[0.2em] font-semibold text-primary mb-4">
+                Key Features
+              </h2>
+              <ul className="space-y-3">
+                {project.features.map((f, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+                    <span className="text-sm text-muted-foreground leading-relaxed">{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.section>
+
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              <h2 className="font-mono text-xs uppercase tracking-[0.2em] font-semibold text-primary mb-4">
+                Challenges & Solutions
+              </h2>
+              <ul className="space-y-3">
+                {project.challenges.map((c, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-muted-foreground shrink-0" />
+                    <span className="text-sm text-muted-foreground leading-relaxed">{c}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.section>
+          </div>
+
+          {/* Sidebar */}
+          <motion.aside
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+            className="space-y-6 lg:sticky lg:top-24 lg:self-start"
+          >
+            <div className="surface-elevated rounded-2xl p-6 rim-light space-y-6">
+              <div>
+                <h3 className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground/70 mb-2">
+                  Role
+                </h3>
+                <p className="text-sm font-medium text-foreground">{project.role}</p>
+              </div>
+              <div>
+                <h3 className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground/70 mb-2">
+                  Tech Stack
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {project.techStack.map((tech) => (
+                    <span key={tech} className="px-2 py-1 bg-secondary rounded text-xs font-mono text-secondary-foreground">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h3 className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground/70 mb-2">
+                  Categories
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {project.categories.map((cat) => (
+                    <span key={cat} className="px-2 py-1 bg-primary/10 rounded text-xs font-mono text-primary">
+                      {cat}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-3">
+              <button className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent text-accent-foreground rounded-xl font-medium text-sm hover:brightness-110 active:translate-y-px transition-all">
+                <Play size={16} strokeWidth={1.5} />
+                Play / Download
+              </button>
+              <button className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 surface-elevated rim-light rounded-xl font-medium text-sm text-foreground hover:bg-secondary transition-all active:translate-y-px">
+                <ExternalLink size={16} strokeWidth={1.5} />
+                View Source
+              </button>
+            </div>
+          </motion.aside>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProjectDetail;
