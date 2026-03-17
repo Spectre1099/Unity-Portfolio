@@ -16,7 +16,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
         >
           <span className="inline-block font-mono text-xs uppercase tracking-[0.2em] font-semibold text-primary mb-6">
-            Gameplay Programmer - Unity & C# - Multiplayer Systems - Performance Optimization
+            Hi, I'm
           </span>
         </motion.div>
 
@@ -36,10 +36,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.2, ease: [0.23, 1, 0.32, 1] }}
           className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed"
         >
-          Gameplay Programmer and Unity Developer with 4+ years of experience
-          building scalable gameplay systems for mobile and cross-platform games.
-          Specialized in multiplayer systems, performance optimization, and clean,
-          modular architectures.
+          Game Developer — Unity, Simulation, Casual. Mobile & Cross platform.
         </motion.p>
 
         <motion.div
