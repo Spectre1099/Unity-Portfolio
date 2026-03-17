@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Play } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { Project } from "@/data/projects";
 
@@ -29,7 +29,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
         <div className="absolute inset-0 scanline-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         {/* Gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
-        
+
         {/* Hover actions */}
         <div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <Link
@@ -39,10 +39,17 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
             <ExternalLink size={14} strokeWidth={1.5} />
             Details
           </Link>
-          <button className="px-4 py-2 bg-accent text-accent-foreground rounded-lg text-xs font-semibold uppercase tracking-wider hover:brightness-110 transition-all flex items-center gap-2">
-            <Play size={14} strokeWidth={1.5} />
-            Play
-          </button>
+          {project.storeUrl && (
+            <a
+              href={project.storeUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="px-4 py-2 bg-accent text-accent-foreground rounded-lg text-xs font-semibold uppercase tracking-wider hover:brightness-110 transition-all flex items-center gap-2"
+            >
+              <ExternalLink size={14} strokeWidth={1.5} />
+              Visit Store
+            </a>
+          )}
         </div>
       </div>
 

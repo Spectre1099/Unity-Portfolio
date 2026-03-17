@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, ExternalLink, Play } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import { projects } from "@/data/projects";
 
 const ProjectDetail = () => {
@@ -175,16 +175,19 @@ const ProjectDetail = () => {
               </div>
             </div>
 
-            <div className="flex flex-col gap-3">
-              <button className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent text-accent-foreground rounded-xl font-medium text-sm hover:brightness-110 active:translate-y-px transition-all">
-                <Play size={16} strokeWidth={1.5} />
-                Play / Download
-              </button>
-              <button className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 surface-elevated rim-light rounded-xl font-medium text-sm text-foreground hover:bg-secondary transition-all active:translate-y-px">
-                <ExternalLink size={16} strokeWidth={1.5} />
-                View Source
-              </button>
-            </div>
+            {project.storeUrl && (
+              <div className="flex flex-col gap-3">
+                <a
+                  href={project.storeUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent text-accent-foreground rounded-xl font-medium text-sm hover:brightness-110 active:translate-y-px transition-all"
+                >
+                  <ExternalLink size={16} strokeWidth={1.5} />
+                  Visit Store
+                </a>
+              </div>
+            )}
           </motion.aside>
         </div>
       </div>
