@@ -14,8 +14,8 @@ const ExperienceSection = () => {
             Career Timeline
           </span>
           <h2 className="mt-3 text-4xl font-medium tracking-tighter">Work Experience</h2>
-          <p className="mt-3 text-sm text-muted-foreground">
-            Total experience: 4 years 6 months
+          <p className="mt-3 text-sm text-primary">
+            Total experience: 4 years 6 months (Sep 2021 - Mar 2026)
           </p>
         </motion.div>
 
