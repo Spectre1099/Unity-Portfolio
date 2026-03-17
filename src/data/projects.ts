@@ -1,5 +1,5 @@
 import assassinHunter from "@/assets/Assassin Hunter 3D Game.jpg";
-import clashOfTowers from "@/assets/clash of towers.jpg";
+import clashOfTowers from "@/assets/clash of towers.png";
 import constructionSimulator from "@/assets/Construction Simulator 3D Game.jpg";
 import deadlyZombies from "@/assets/Deadly Zombies Attack Survival.jpg";
 import demolitionDerby from "@/assets/Demolition Derby Car Games.jpg";
