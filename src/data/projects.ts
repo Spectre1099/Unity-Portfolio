@@ -6,6 +6,7 @@ import demolitionDerby from "@/assets/Demolition Derby Car Games.jpg";
 import hexaSort from "@/assets/Hexa Sort Color Stack Merge.png";
 import monsterTruck from "@/assets/Monster Truck Derby Games.jpg";
 import rocketCar from "@/assets/Rocket Car Car Ball Games.jpg";
+import snake2048 from "@/assets/snake.io 2048.jpg";
 import usBus from "@/assets/US Bus Simulator Driving Game.jpg";
 
 export type Project = {
@@ -80,7 +81,7 @@ export const projects: Project[] = [
     title: "Snake.io 2048",
     description:
       "Combines classic snake action with 2048 merging. Collect blocks, grow stronger, and outplay rivals in a fast-paced arena.",
-    image: hexaSort,
+    image: snake2048,
     categories: ["Multiplayer", "Mobile", "Casual"],
     techStack: ["Unity", "C#", "Multiplayer"],
     role: "Unity Developer",
