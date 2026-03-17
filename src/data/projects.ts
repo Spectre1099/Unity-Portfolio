@@ -31,7 +31,6 @@ export const categories = [
   "Multiplayer",
   "Casual",
   "Racing",
-  "Roleplaying",
   "Action",
   "FPS",
   "Simulation",
@@ -129,7 +128,7 @@ export const projects: Project[] = [
     description:
       "Rocket-powered cars meet fast soccer action with stunts, abilities, and competitive arenas.",
     image: rocketCar,
-    categories: ["Vehicle", "Android"],
+    categories: ["Vehicle", "Racing", "Android"],
     techStack: ["Unity", "C#", "Android"],
     role: "Unity Developer Intern",
     overview:
