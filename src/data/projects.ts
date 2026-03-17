@@ -244,5 +244,7 @@ export const projects: Project[] = [
     contributions: studioContributions,
     features: studioFeatures,
     challenges: studioChallenges,
+    storeUrl:
+      "https://play.google.com/store/apps/details?id=games.markhor.hexasortcolorstackmerge&hl=en",
   },
 ];
