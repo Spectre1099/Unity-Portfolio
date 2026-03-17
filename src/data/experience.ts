@@ -11,7 +11,7 @@ export const experiences: Experience[] = [
   {
     company: "Markhor Games",
     role: "Unity Developer",
-    dates: "Feb 2025 - Present",
+    dates: "Feb 2025 - Mar 2026",
     responsibilities: [
       "Design and develop casual and hyper-casual games from prototype to full release using Unity and C#.",
       "Implement ad mediation and analytics systems to support monetization and player behavior tracking.",
