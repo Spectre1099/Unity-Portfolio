@@ -36,7 +36,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.2, ease: [0.23, 1, 0.32, 1] }}
           className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed"
         >
-          Game Developer — Unity, Simulation, Casual. Mobile & Cross platform.
+          Game Developer - Unity, Simulation, Casual. Mobile and Cross platform.
         </motion.p>
 
         <motion.div
@@ -94,27 +94,6 @@ const HeroSection = () => {
             <Github size={14} strokeWidth={1.5} />
             GitHub
           </a>
-        </motion.div>
-
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-16 grid grid-cols-3 gap-8 max-w-lg"
-        >
-          {[
-            { value: "4+", label: "Years Experience" },
-            { value: "Multiplayer", label: "Systems Focus" },
-            { value: "Cross-Platform", label: "Mobile & PC" },
-          ].map((stat) => (
-            <div key={stat.label}>
-              <div className="font-mono text-2xl font-semibold tabular-nums text-foreground">
-                {stat.value}
-              </div>
-              <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
-            </div>
-          ))}
         </motion.div>
       </div>
     </section>
