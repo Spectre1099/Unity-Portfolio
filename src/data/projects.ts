@@ -8,6 +8,10 @@ import monsterTruck from "@/assets/Monster Truck Derby Games.jpg";
 import rocketCar from "@/assets/Rocket Car Car Ball Games.jpg";
 import snake2048 from "@/assets/snake.io 2048.jpg";
 import usBus from "@/assets/US Bus Simulator Driving Game.jpg";
+import taxi from "@/assets/Taxi.png";
+import snowMobile from "@/assets/Snow mobile.png";
+import carParking from "@/assets/car parking.png";
+import wildAnimal from "@/assets/wild animal.png";
 
 export type Project = {
   id: string;
@@ -223,7 +227,7 @@ export const projects: Project[] = [
     id: "city-car-taxi-simulator-2k23",
     title: "City Car Taxi Simulator 2K23",
     description: "Drive city routes, pick up passengers, and complete taxi missions.",
-    image: usBus,
+    image: taxi,
     categories: ["Simulation", "Vehicle", "iOS"],
     techStack: ["Unity", "C#", "iOS"],
     role: "Unity Developer",
@@ -237,7 +241,7 @@ export const projects: Project[] = [
     id: "extreme-snowmobile-racing-rush",
     title: "Extreme Snowmobile Racing Rush",
     description: "High-speed snowmobile racing with tight controls and icy tracks.",
-    image: monsterTruck,
+    image: snowMobile,
     categories: ["Racing", "Vehicle", "iOS"],
     techStack: ["Unity", "C#", "iOS"],
     role: "Unity Developer",
@@ -251,7 +255,7 @@ export const projects: Project[] = [
     id: "advance-car-parking-master-3d",
     title: "Advance Car Parking Master 3D",
     description: "Precision parking challenges with progressively harder levels.",
-    image: demolitionDerby,
+    image: carParking,
     categories: ["Simulation", "Vehicle", "iOS"],
     techStack: ["Unity", "C#", "iOS"],
     role: "Unity Developer",
@@ -265,7 +269,7 @@ export const projects: Project[] = [
     id: "wild-animals-transporter-game",
     title: "Wild Animals Transporter Game",
     description: "Transport wildlife across varied terrain with heavy vehicles.",
-    image: constructionSimulator,
+    image: wildAnimal,
     categories: ["Simulation", "Vehicle", "iOS"],
     techStack: ["Unity", "C#", "iOS"],
     role: "Unity Developer",
