@@ -27,12 +27,18 @@ export type Project = {
 
 export const categories = [
   "All",
+  "Strategy",
   "Multiplayer",
-  "Mobile",
-  "FPS",
   "Casual",
   "Racing",
+  "Roleplaying",
+  "Action",
+  "FPS",
   "Simulation",
+  "Vehicle",
+  "Android",
+  "iOS",
+  "Mobile",
 ];
 
 const studioContributions = [
@@ -60,8 +66,8 @@ export const projects: Project[] = [
     description:
       "Fast-paced strategy game where you capture towers, outsmart rivals, and dominate battlefields in offline or real-time multiplayer matches.",
     image: clashOfTowers,
-    categories: ["Multiplayer", "Mobile", "Casual"],
-    techStack: ["Unity", "C#", "Multiplayer"],
+    categories: ["Strategy", "Multiplayer", "Android"],
+    techStack: ["Unity", "C#", "Android"],
     role: "Unity Developer",
     featured: true,
     overview:
@@ -82,8 +88,8 @@ export const projects: Project[] = [
     description:
       "Combines classic snake action with 2048 merging. Collect blocks, grow stronger, and outplay rivals in a fast-paced arena.",
     image: snake2048,
-    categories: ["Multiplayer", "Mobile", "Casual"],
-    techStack: ["Unity", "C#", "Multiplayer"],
+    categories: ["Casual", "Android"],
+    techStack: ["Unity", "C#", "Android"],
     role: "Unity Developer",
     overview:
       "Snake.io 2048 blends arcade snake gameplay with 2048-style merging for a tactical, competitive loop.",
@@ -103,8 +109,8 @@ export const projects: Project[] = [
     description:
       "High-octane derby game where you smash cars in intense arenas, customize your ride, and enjoy realistic damage.",
     image: demolitionDerby,
-    categories: ["Mobile", "Racing", "Simulation"],
-    techStack: ["Unity", "C#", "Physics"],
+    categories: ["Casual", "Racing", "Android"],
+    techStack: ["Unity", "C#", "Android"],
     role: "Unity Developer",
     overview:
       "A derby-focused driving game built around arena destruction, car customization, and multiple play modes.",
@@ -124,8 +130,8 @@ export const projects: Project[] = [
     description:
       "Rocket-powered cars meet fast soccer action with stunts, abilities, and competitive arenas.",
     image: rocketCar,
-    categories: ["Mobile", "Racing", "Casual"],
-    techStack: ["Unity", "C#", "Physics"],
+    categories: ["Roleplaying", "Android"],
+    techStack: ["Unity", "C#", "Android"],
     role: "Unity Developer Intern",
     overview:
       "A high-speed car ball game featuring aerial stunts, special abilities, and arcade-friendly controls.",
@@ -145,8 +151,8 @@ export const projects: Project[] = [
     description:
       "Explosive demolition action with monster trucks across stunt, race, and survival modes.",
     image: monsterTruck,
-    categories: ["Mobile", "Racing", "Simulation"],
-    techStack: ["Unity", "C#"],
+    categories: ["Roleplaying", "Mobile"],
+    techStack: ["Unity", "C#", "Mobile"],
     role: "Unity Developer",
     overview:
       "Monster Truck: Derby Games focuses on heavy-vehicle handling, high-impact collisions, and multi-mode gameplay.",
@@ -166,8 +172,8 @@ export const projects: Project[] = [
     description:
       "Fast-paced mobile action where you fight with knives, eliminate opponents, and complete challenges.",
     image: assassinHunter,
-    categories: ["Mobile", "FPS", "Casual"],
-    techStack: ["Unity", "C#", "AI"],
+    categories: ["Action", "Android"],
+    techStack: ["Unity", "C#", "Android"],
     role: "Unity Developer",
     overview:
       "A mobile action game built around stealth, quick combat, and short-session progression.",
@@ -187,8 +193,8 @@ export const projects: Project[] = [
     description:
       "Fight off zombies with powerful guns, upgrade weapons, and survive intense waves.",
     image: deadlyZombies,
-    categories: ["Mobile", "FPS"],
-    techStack: ["Unity", "C#"],
+    categories: ["FPS", "Action", "iOS"],
+    techStack: ["Unity", "C#", "iOS"],
     role: "Unity Developer",
     overview:
       "An iOS zombie shooter focused on wave survival, weapon progression, and fast-paced combat.",
@@ -204,8 +210,8 @@ export const projects: Project[] = [
     description:
       "Operate heavy machinery to build roads and bridges for a modern city in 3D.",
     image: constructionSimulator,
-    categories: ["Mobile", "Simulation"],
-    techStack: ["Unity", "C#"],
+    categories: ["Strategy", "iOS"],
+    techStack: ["Unity", "C#", "iOS"],
     role: "Unity Developer",
     overview:
       "A construction simulation built for iOS with large vehicles, mission flow, and progression.",
@@ -221,8 +227,8 @@ export const projects: Project[] = [
     description:
       "Realistic bus driving with city missions, offroad routes, and immersive 3D environments.",
     image: usBus,
-    categories: ["Mobile", "Simulation"],
-    techStack: ["Unity", "C#"],
+    categories: ["Simulation", "Vehicle", "Android"],
+    techStack: ["Unity", "C#", "Android"],
     role: "Unity Developer",
     overview:
       "A bus-driving simulation with missions, city routes, and offline play.",
@@ -237,8 +243,8 @@ export const projects: Project[] = [
     title: "Hexa Sort Color Stack Merge",
     description: "Casual Unity project built for rapid prototyping and polish.",
     image: hexaSort,
-    categories: ["Mobile", "Casual"],
-    techStack: ["Unity", "C#"],
+    categories: ["Casual", "Android"],
+    techStack: ["Unity", "C#", "Android"],
     role: "Unity Developer",
     overview: "A mobile-focused Unity project delivered through iterative prototyping.",
     contributions: studioContributions,
