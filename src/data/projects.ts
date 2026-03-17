@@ -38,7 +38,6 @@ export const categories = [
   "Vehicle",
   "Android",
   "iOS",
-  "Mobile",
 ];
 
 const studioContributions = [
@@ -151,8 +150,8 @@ export const projects: Project[] = [
     description:
       "Explosive demolition action with monster trucks across stunt, race, and survival modes.",
     image: monsterTruck,
-    categories: ["Roleplaying", "Mobile"],
-    techStack: ["Unity", "C#", "Mobile"],
+    categories: ["Roleplaying", "Android"],
+    techStack: ["Unity", "C#", "Android"],
     role: "Unity Developer",
     overview:
       "Monster Truck: Derby Games focuses on heavy-vehicle handling, high-impact collisions, and multi-mode gameplay.",
