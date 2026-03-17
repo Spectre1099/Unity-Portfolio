@@ -1,7 +1,13 @@
-import projectFps from "@/assets/project-fps.jpg";
-import projectMobile from "@/assets/project-mobile.jpg";
-import projectRacing from "@/assets/project-racing.jpg";
-import projectArena from "@/assets/project-arena.jpg";
+import assassinHunter from "@/assets/Assassin Hunter 3D Game.jpg";
+import clashOfTowers from "@/assets/clash of towers.jpg";
+import constructionSimulator from "@/assets/Construction Simulator 3D Game.jpg";
+import deadlyZombies from "@/assets/Deadly Zombies Attack Survival.jpg";
+import demolitionDerby from "@/assets/Demolition Derby Car Games.jpg";
+import hexaSort from "@/assets/Hexa Sort Color Stack Merge.png";
+import monsterTruck from "@/assets/Monster Truck Derby Games.jpg";
+import rocketCar from "@/assets/Rocket Car Car Ball Games.jpg";
+import snake2048 from "@/assets/snake.io 2048.jpg";
+import usBus from "@/assets/US Bus Simulator Driving Game.jpg";
 
 export type Project = {
   id: string;
@@ -53,7 +59,7 @@ export const projects: Project[] = [
     title: "Clash of Towers",
     description:
       "Fast-paced strategy game where you capture towers, outsmart rivals, and dominate battlefields in offline or real-time multiplayer matches.",
-    image: projectArena,
+    image: clashOfTowers,
     categories: ["Multiplayer", "Mobile", "Casual"],
     techStack: ["Unity", "C#", "Multiplayer"],
     role: "Unity Developer",
@@ -75,7 +81,7 @@ export const projects: Project[] = [
     title: "Snake.io 2048",
     description:
       "Combines classic snake action with 2048 merging. Collect blocks, grow stronger, and outplay rivals in a fast-paced arena.",
-    image: projectMobile,
+    image: snake2048,
     categories: ["Multiplayer", "Mobile", "Casual"],
     techStack: ["Unity", "C#", "Multiplayer"],
     role: "Unity Developer",
@@ -96,7 +102,7 @@ export const projects: Project[] = [
     title: "Demolition Derby: Car Games",
     description:
       "High-octane derby game where you smash cars in intense arenas, customize your ride, and enjoy realistic damage.",
-    image: projectRacing,
+    image: demolitionDerby,
     categories: ["Mobile", "Racing", "Simulation"],
     techStack: ["Unity", "C#", "Physics"],
     role: "Unity Developer",
@@ -117,7 +123,7 @@ export const projects: Project[] = [
     title: "Rocket Car: Car Ball Games",
     description:
       "Rocket-powered cars meet fast soccer action with stunts, abilities, and competitive arenas.",
-    image: projectArena,
+    image: rocketCar,
     categories: ["Mobile", "Racing", "Casual"],
     techStack: ["Unity", "C#", "Physics"],
     role: "Unity Developer Intern",
@@ -138,7 +144,7 @@ export const projects: Project[] = [
     title: "Monster Truck: Derby Games",
     description:
       "Explosive demolition action with monster trucks across stunt, race, and survival modes.",
-    image: projectRacing,
+    image: monsterTruck,
     categories: ["Mobile", "Racing", "Simulation"],
     techStack: ["Unity", "C#"],
     role: "Unity Developer",
@@ -159,7 +165,7 @@ export const projects: Project[] = [
     title: "Assassin Hunter 3D Game",
     description:
       "Fast-paced mobile action where you fight with knives, eliminate opponents, and complete challenges.",
-    image: projectFps,
+    image: assassinHunter,
     categories: ["Mobile", "FPS", "Casual"],
     techStack: ["Unity", "C#", "AI"],
     role: "Unity Developer",
@@ -180,7 +186,7 @@ export const projects: Project[] = [
     title: "Deadly Zombies Attack Survival",
     description:
       "Fight off zombies with powerful guns, upgrade weapons, and survive intense waves.",
-    image: projectFps,
+    image: deadlyZombies,
     categories: ["Mobile", "FPS"],
     techStack: ["Unity", "C#"],
     role: "Unity Developer",
@@ -197,7 +203,7 @@ export const projects: Project[] = [
     title: "Construction Simulator 3D Game",
     description:
       "Operate heavy machinery to build roads and bridges for a modern city in 3D.",
-    image: projectRacing,
+    image: constructionSimulator,
     categories: ["Mobile", "Simulation"],
     techStack: ["Unity", "C#"],
     role: "Unity Developer",
@@ -214,7 +220,7 @@ export const projects: Project[] = [
     title: "US Bus Simulator Driving Game",
     description:
       "Realistic bus driving with city missions, offroad routes, and immersive 3D environments.",
-    image: projectRacing,
+    image: usBus,
     categories: ["Mobile", "Simulation"],
     techStack: ["Unity", "C#"],
     role: "Unity Developer",
@@ -230,24 +236,11 @@ export const projects: Project[] = [
     id: "hexa-sort-color-stack-merge",
     title: "Hexa Sort Color Stack Merge",
     description: "Casual Unity project built for rapid prototyping and polish.",
-    image: projectMobile,
+    image: hexaSort,
     categories: ["Mobile", "Casual"],
     techStack: ["Unity", "C#"],
     role: "Unity Developer",
     overview: "A mobile-focused Unity project delivered through iterative prototyping.",
-    contributions: studioContributions,
-    features: studioFeatures,
-    challenges: studioChallenges,
-  },
-  {
-    id: "cuboids-io",
-    title: "Cuboids.io",
-    description: "Studio project with online components developed in Unity.",
-    image: projectArena,
-    categories: ["Multiplayer", "Mobile"],
-    techStack: ["Unity", "C#", "PlayFab"],
-    role: "Unity Developer",
-    overview: "A Unity project involving multiplayer-ready systems and live features.",
     contributions: studioContributions,
     features: studioFeatures,
     challenges: studioChallenges,
