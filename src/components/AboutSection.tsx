@@ -4,18 +4,18 @@ import { Trophy, Zap, Target } from "lucide-react";
 const highlights = [
   {
     icon: Trophy,
-    title: "Shipped 6 Titles",
-    description: "Delivered production-quality games across FPS, RPG, racing, and mobile casual genres.",
+    title: "Gameplay Systems",
+    description: "Designs clean, modular gameplay architectures that scale with production needs.",
   },
   {
     icon: Zap,
-    title: "Performance Obsessed",
-    description: "Consistently reduced frame times by 40-60% through profiling-driven optimization.",
+    title: "Performance Focus",
+    description: "Profiles, optimizes, and stabilizes gameplay for mobile and cross-platform targets.",
   },
   {
     icon: Target,
-    title: "500K+ Downloads",
-    description: "Games reached half a million players with 4.5+ average store ratings.",
+    title: "Multiplayer Ready",
+    description: "Experience integrating Photon, Fishnet, and PlayFab for online gameplay.",
   },
 ];
 

@@ -73,7 +73,7 @@ const ContactSection = () => {
                 { icon: Phone, label: "0320 0429141", href: "tel:+923200429141" },
                 { icon: Mail, label: "adeeel00744@gmail.com", href: "mailto:adeeel00744@gmail.com" },
                 { icon: Linkedin, label: "linkedin.com/in/m-adeelkhan", href: "https://www.linkedin.com/in/m-adeelkhan/" },
-                { icon: Github, label: "github.com/Balongi-Co", href: "https://github.com/Balongi-Co" },
+                { icon: Github, label: "github.com/Balongi", href: "https://github.com/Balongi" },
               ].map((link) => (
                 <a
                   key={link.label}

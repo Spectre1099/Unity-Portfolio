@@ -11,9 +11,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.1, ease: [0.23, 1, 0.32, 1] }}
       whileHover={{ y: -4, scale: 1.01 }}
-      className={`group relative overflow-hidden rounded-2xl rim-light surface-elevated p-2 ${
-        project.featured ? "md:col-span-2" : ""
-      }`}
+      className="group relative overflow-hidden rounded-2xl rim-light surface-elevated p-2"
     >
       {/* Image */}
       <div className="relative aspect-video overflow-hidden rounded-xl bg-secondary">
