@@ -49,7 +49,7 @@ const Navbar = () => {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/90 border-b border-border/50 sm:bg-background/80 sm:backdrop-blur-xl"
+      className="sticky top-0 left-0 right-0 z-50 bg-background/90 border-b border-border/50 md:fixed md:top-0 md:bg-background/80 md:backdrop-blur-xl"
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#" className="font-mono text-sm font-semibold tracking-tight text-primary">
