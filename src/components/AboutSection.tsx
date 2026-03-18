@@ -44,15 +44,12 @@ const AboutSection = () => {
             <p className="text-lg text-muted-foreground leading-relaxed">
               Gameplay Programmer and Unity Developer with 4+ years of experience building
               scalable gameplay systems for mobile and cross-platform games. Specialized in
-              gameplay programming, multiplayer systems, and performance optimization, with
-              a focus on clean, modular architectures that support complex features.
+              C#, gameplay architecture, multiplayer systems, and performance optimization.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Experienced across casual, puzzle, simulation, racing, FPS, tower defense,
-              multiplayer, and PvP genres. I regularly work with C#, Unity systems,
-              networking integration, and production-ready game architecture designed for
-              long-term scalability. I enjoy solving challenging technical problems and I am
-              expanding into Defold and Lua to broaden cross-engine capabilities.
+              Experienced across casual, simulation, racing, and multiplayer genres, with
+              working knowledge of Defold and Lua. I enjoy solving challenging technical
+              problems and building production-ready systems that scale with live content.
             </p>
           </motion.div>
 
