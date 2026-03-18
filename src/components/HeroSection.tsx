@@ -53,7 +53,7 @@ const HeroSection = () => {
             <ArrowDown size={16} strokeWidth={1.5} className="group-hover:translate-y-0.5 transition-transform" />
           </a>
           <a
-            href="https://drive.google.com/file/d/1sm6wUx4F2p2Od7V5vAtncSnBTHN16fpm/view?usp=sharing"
+            href="https://drive.google.com/file/d/1qfxGjPFspBQwd_5mDp6OFJY7gJIwsxba/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 surface-elevated rounded-xl font-medium text-sm text-foreground hover:bg-secondary transition-all active:translate-y-px"
