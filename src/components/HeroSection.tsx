@@ -6,8 +6,8 @@ const HeroSection = () => {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Ambient gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[128px]" />
-      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-accent/5 rounded-full blur-[100px]" />
+      <div className="absolute top-1/4 left-1/4 hidden sm:block w-96 h-96 bg-primary/5 rounded-full blur-[128px]" />
+      <div className="absolute bottom-1/4 right-1/4 hidden sm:block w-64 h-64 bg-accent/5 rounded-full blur-[100px]" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 pt-20">
         <motion.div
