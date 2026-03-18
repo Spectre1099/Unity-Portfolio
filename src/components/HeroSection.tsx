@@ -17,14 +17,15 @@ const HeroSection = () => {
     return () => mediaQuery.removeListener(update);
   }, []);
 
-  const motionProps = (delay = 0) =>
-    reduceMotion
-      ? { initial: false, animate: false }
-      : {
-          initial: { opacity: 0, y: 30 },
-          animate: { opacity: 1, y: 0 },
-          transition: { duration: 0.6, delay, ease: [0.23, 1, 0.32, 1] },
-        };
+  const motionProps = (delay = 0) => ({
+    initial: { opacity: 0, y: 30 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6, delay, ease: [0.23, 1, 0.32, 1] },
+  });
+
+  const MotionDiv = reduceMotion ? "div" : motion.div;
+  const MotionH1 = reduceMotion ? "h1" : motion.h1;
+  const MotionP = reduceMotion ? "p" : motion.p;
 
   return (
     <section
@@ -37,28 +38,31 @@ const HeroSection = () => {
       <div className="absolute bottom-1/4 right-1/4 hidden sm:block w-64 h-64 bg-accent/5 rounded-full blur-[100px]" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 pt-20">
-        <motion.div {...motionProps(0)}>
+        <MotionDiv {...(!reduceMotion ? motionProps(0) : {})}>
           <span className="inline-block font-mono text-sm uppercase tracking-[0.2em] font-semibold text-primary mb-6">
             Hi, I'm
           </span>
-        </motion.div>
+        </MotionDiv>
 
-        <motion.h1
-          {...motionProps(0.1)}
+        <MotionH1
+          {...(!reduceMotion ? motionProps(0.1) : {})}
           className="text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tighter leading-[1.05]"
         >
           Muhammad{" "}
           <span className="text-gradient">Adeel Khan</span>
-        </motion.h1>
+        </MotionH1>
 
-        <motion.p
-          {...motionProps(0.2)}
+        <MotionP
+          {...(!reduceMotion ? motionProps(0.2) : {})}
           className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed"
         >
           Game Developer - Unity, Simulation, Casual. Mobile and Cross platform.
-        </motion.p>
+        </MotionP>
 
-        <motion.div {...motionProps(0.3)} className="mt-10 flex flex-wrap gap-4">
+        <MotionDiv
+          {...(!reduceMotion ? motionProps(0.3) : {})}
+          className="mt-10 flex flex-wrap gap-4"
+        >
           <a
             href="#projects"
             className="group inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-xl font-medium text-sm hover:brightness-110 active:translate-y-px transition-all glow-primary"
@@ -82,9 +86,12 @@ const HeroSection = () => {
             <Mail size={16} strokeWidth={1.5} />
             Contact
           </a>
-        </motion.div>
+        </MotionDiv>
 
-        <motion.div {...motionProps(0.4)} className="mt-8 flex flex-wrap gap-3">
+        <MotionDiv
+          {...(!reduceMotion ? motionProps(0.4) : {})}
+          className="mt-8 flex flex-wrap gap-3"
+        >
           <a
             href="https://www.linkedin.com/in/m-adeelkhan/"
             target="_blank"
@@ -103,7 +110,7 @@ const HeroSection = () => {
             <Github size={14} strokeWidth={1.5} />
             GitHub
           </a>
-        </motion.div>
+        </MotionDiv>
       </div>
     </section>
   );
