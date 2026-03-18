@@ -89,6 +89,18 @@
 }
 
 @media (max-width: 640px) {
+  #home,
+  #home * {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    filter: none !important;
+    transform: none !important;
+  }
+
+  #home {
+    background: hsl(var(--background));
+  }
+
   .hero-ambient {
     display: none;
   }
