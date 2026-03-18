@@ -13,6 +13,18 @@ const navItems = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const scrollToSection = (href: string) => {
+    const id = href.replace("#", "");
+    const target = document.getElementById(id);
+    if (!target) {
+      return;
+    }
+
+    const headerOffset = 80;
+    const targetTop = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+    window.scrollTo({ top: targetTop, behavior: "smooth" });
+  };
+
   const handleNavClick = (event: MouseEvent<HTMLAnchorElement>, href: string) => {
     if (!href.startsWith("#")) {
       return;
@@ -21,11 +33,14 @@ const Navbar = () => {
     event.preventDefault();
     setIsOpen(false);
 
-    const target = document.querySelector(href);
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-      history.replaceState(null, "", href);
-    }
+    window.setTimeout(() => {
+      scrollToSection(href);
+      if (history.replaceState) {
+        history.replaceState(null, "", href);
+      } else {
+        window.location.hash = href;
+      }
+    }, 80);
   };
 
   return (
