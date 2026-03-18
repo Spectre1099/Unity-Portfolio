@@ -89,6 +89,10 @@
 }
 
 @media (max-width: 640px) {
+  .hero-ambient {
+    display: none;
+  }
+
   .text-gradient {
     background-image: none;
     color: hsl(var(--primary));
