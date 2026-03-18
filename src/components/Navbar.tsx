@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type MouseEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
@@ -12,6 +12,21 @@ const navItems = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleNavClick = (event: MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (!href.startsWith("#")) {
+      return;
+    }
+
+    event.preventDefault();
+    setIsOpen(false);
+
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      history.replaceState(null, "", href);
+    }
+  };
 
   return (
     <motion.nav
@@ -31,6 +46,7 @@ const Navbar = () => {
             <a
               key={item.label}
               href={item.href}
+              onClick={(event) => handleNavClick(event, item.href)}
               className="text-xs uppercase tracking-[0.15em] font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
             >
               {item.label}
@@ -38,6 +54,7 @@ const Navbar = () => {
           ))}
           <a
             href="#contact"
+            onClick={(event) => handleNavClick(event, "#contact")}
             className="px-4 py-2 text-xs uppercase tracking-[0.15em] font-semibold bg-primary text-primary-foreground rounded-lg hover:brightness-110 active:translate-y-px transition-all"
           >
             Hire Me
@@ -68,7 +85,7 @@ const Navbar = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(event) => handleNavClick(event, item.href)}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {item.label}
