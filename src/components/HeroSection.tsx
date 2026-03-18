@@ -1,7 +1,31 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { ArrowDown, Download, Mail, Linkedin, Github } from "lucide-react";
 
 const HeroSection = () => {
+  const [reduceMotion, setReduceMotion] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 640px)");
+    const update = () => setReduceMotion(mediaQuery.matches);
+    update();
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener("change", update);
+      return () => mediaQuery.removeEventListener("change", update);
+    }
+    mediaQuery.addListener(update);
+    return () => mediaQuery.removeListener(update);
+  }, []);
+
+  const motionProps = (delay = 0) =>
+    reduceMotion
+      ? { initial: false, animate: false }
+      : {
+          initial: { opacity: 0, y: 30 },
+          animate: { opacity: 1, y: 0 },
+          transition: { duration: 0.6, delay, ease: [0.23, 1, 0.32, 1] },
+        };
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Ambient gradient */}
@@ -10,20 +34,14 @@ const HeroSection = () => {
       <div className="absolute bottom-1/4 right-1/4 hidden sm:block w-64 h-64 bg-accent/5 rounded-full blur-[100px]" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 pt-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
-        >
+        <motion.div {...motionProps(0)}>
           <span className="inline-block font-mono text-sm uppercase tracking-[0.2em] font-semibold text-primary mb-6">
             Hi, I'm
           </span>
         </motion.div>
 
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1, ease: [0.23, 1, 0.32, 1] }}
+          {...motionProps(0.1)}
           className="text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tighter leading-[1.05]"
         >
           Muhammad{" "}
@@ -31,20 +49,13 @@ const HeroSection = () => {
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2, ease: [0.23, 1, 0.32, 1] }}
+          {...motionProps(0.2)}
           className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed"
         >
           Game Developer - Unity, Simulation, Casual. Mobile and Cross platform.
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3, ease: [0.23, 1, 0.32, 1] }}
-          className="mt-10 flex flex-wrap gap-4"
-        >
+        <motion.div {...motionProps(0.3)} className="mt-10 flex flex-wrap gap-4">
           <a
             href="#projects"
             className="group inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-xl font-medium text-sm hover:brightness-110 active:translate-y-px transition-all glow-primary"
@@ -70,12 +81,7 @@ const HeroSection = () => {
           </a>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4, ease: [0.23, 1, 0.32, 1] }}
-          className="mt-8 flex flex-wrap gap-3"
-        >
+        <motion.div {...motionProps(0.4)} className="mt-8 flex flex-wrap gap-3">
           <a
             href="https://www.linkedin.com/in/m-adeelkhan/"
             target="_blank"
