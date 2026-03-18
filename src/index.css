@@ -87,3 +87,18 @@
     @apply border border-white/[0.06];
   }
 }
+
+@media (max-width: 640px) {
+  .text-gradient {
+    background-image: none;
+    color: hsl(var(--primary));
+  }
+
+  .glow-primary {
+    box-shadow: none;
+  }
+
+  .surface-elevated {
+    box-shadow: none;
+  }
+}
