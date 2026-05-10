@@ -1,12 +1,12 @@
-import assassinHunter from "@/assets/Assassin Hunter 3D Game.jpg";
-import clashOfTowers from "@/assets/clash of towers.png";
-import constructionSimulator from "@/assets/Construction Simulator 3D Game.jpg";
-import deadlyZombies from "@/assets/Deadly Zombies Attack Survival.jpg";
-import demolitionDerby from "@/assets/Demolition Derby Car Games.jpg";
-import hexaSort from "@/assets/Hexa Sort Color Stack Merge.png";
-import monsterTruck from "@/assets/Monster Truck Derby Games.jpg";
-import rocketCar from "@/assets/Rocket Car Car Ball Games.jpg";
-import snake2048 from "@/assets/snake.io 2048.jpg";
+import agentHuntSniper from "@/assets/Agent Hunt Sniper Pro Shooter.webp";
+import amelieLostSpirits from "@/assets/Amelie And The Lost Spirits.webp";
+import bikeSurfers from "@/assets/Bike Surfers Race Rush 3D.webp";
+import bombsAway from "@/assets/Bombs Away Survive or Die.webp";
+import botCrash from "@/assets/Bot Crash Combat Arena.webp";
+import clashScarySquad from "@/assets/Clash of Scary Squad.webp";
+import lastBomber from "@/assets/Last Bomber Standing.webp";
+import scaryStranger from "@/assets/Scary Stranger 3D.webp";
+import sliceIt from "@/assets/Slice It Cut Them All.webp";
 
 export type Project = {
   id: string;
@@ -60,7 +60,7 @@ export const projects: Project[] = [
     title: "Slice It: Cut Them All",
     description:
       "Mobile action project focused on slicing mechanics, responsive controls, and satisfying gameplay feedback.",
-    image: hexaSort,
+    image: sliceIt,
     categories: ["Casual", "Action", "Mobile", "Android"],
     techStack: ["Unity", "C#", "Android"],
     role: "Software Engineer",
@@ -80,7 +80,7 @@ export const projects: Project[] = [
     title: "Bot Crash: Combat Arena",
     description:
       "Combat arena project with AI-driven opponents, physics-based encounters, and mobile performance requirements.",
-    image: clashOfTowers,
+    image: botCrash,
     categories: ["Action", "AI", "Mobile", "Android"],
     techStack: ["Unity", "C#", "AI"],
     role: "Software Engineer",
@@ -99,7 +99,7 @@ export const projects: Project[] = [
     title: "Agent Hunt Sniper: Pro Shooter",
     description:
       "Shooter project involving aiming, player control, enemy behavior, and production-ready gameplay features.",
-    image: assassinHunter,
+    image: agentHuntSniper,
     categories: ["Shooter", "Action", "AI", "Mobile", "Android"],
     techStack: ["Unity", "C#", "Android"],
     role: "Software Engineer",
@@ -118,7 +118,7 @@ export const projects: Project[] = [
     title: "Bike Surfers: Race Rush 3D",
     description:
       "3D racing game project focused on mobile controls, fast gameplay flow, and optimized runtime performance.",
-    image: rocketCar,
+    image: bikeSurfers,
     categories: ["Racing", "Action", "Mobile", "Android"],
     techStack: ["Unity", "C#", "Android"],
     role: "Software Engineer",
@@ -137,7 +137,7 @@ export const projects: Project[] = [
     title: "Clash of Scary Squad",
     description:
       "Horror/action project with modular gameplay flow, UI systems, and AI behavior support.",
-    image: deadlyZombies,
+    image: clashScarySquad,
     categories: ["Horror", "Action", "AI", "Mobile"],
     techStack: ["Unity", "C#"],
     role: "Associate Software Engineer",
@@ -152,7 +152,7 @@ export const projects: Project[] = [
     title: "Bombs Away: Survive Or Die",
     description:
       "Survival action game project involving gameplay flow, polish, and critical issue resolution.",
-    image: demolitionDerby,
+    image: bombsAway,
     categories: ["Action", "Casual", "Mobile"],
     techStack: ["Unity", "C#"],
     role: "Associate Software Engineer",
@@ -167,7 +167,7 @@ export const projects: Project[] = [
     title: "Last Bomber Standing",
     description:
       "Casual action project built around gameplay systems, meta-game flow, and mobile polish.",
-    image: monsterTruck,
+    image: lastBomber,
     categories: ["Casual", "Action", "Mobile"],
     techStack: ["Unity", "C#"],
     role: "Associate Software Engineer",
@@ -182,7 +182,7 @@ export const projects: Project[] = [
     title: "Amelie And The Lost Spirits",
     description:
       "Horror-adventure project supported by UI polish, gameplay systems, and production bug fixing.",
-    image: constructionSimulator,
+    image: amelieLostSpirits,
     categories: ["Horror", "Mobile"],
     techStack: ["Unity", "C#"],
     role: "Associate Software Engineer",
@@ -197,7 +197,7 @@ export const projects: Project[] = [
     title: "Scary Stranger 3D",
     description:
       "3D horror project involving AI behavior, UI systems, gameplay flow, and optimization work.",
-    image: snake2048,
+    image: scaryStranger,
     categories: ["Horror", "AI", "Mobile", "Android"],
     techStack: ["Unity", "C#", "Android"],
     role: "Associate Software Engineer",
