@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Linkedin, Github, Send } from "lucide-react";
 
-const WEB3FORMS_ACCESS_KEY = "2b03524c-a657-4ccf-bf06-ceb6d08183dd";
+const WEB3FORMS_ACCESS_KEY = "b844acc9-5e69-4dee-ad9a-5dd5276d8ae6";
 const CONTACT_EMAIL = "waleedtahir10@gmail.com";
 
 const ContactSection = () => {
