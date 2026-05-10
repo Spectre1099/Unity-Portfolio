@@ -53,7 +53,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#" className="font-mono text-sm font-semibold tracking-tight text-primary">
-          MAK<span className="text-muted-foreground">.dev</span>
+          MWT<span className="text-muted-foreground">.dev</span>
         </a>
 
         {/* Desktop */}

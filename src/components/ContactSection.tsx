@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Github, Phone, Send } from "lucide-react";
+import { Mail, Linkedin, Github, Send } from "lucide-react";
 
 const WEB3FORMS_ACCESS_KEY = "2b03524c-a657-4ccf-bf06-ceb6d08183dd";
+const CONTACT_EMAIL = "waleedtahir10@gmail.com";
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -23,6 +24,7 @@ const ContactSection = () => {
           access_key: WEB3FORMS_ACCESS_KEY,
           name: form.name,
           email: form.email,
+          to: CONTACT_EMAIL,
           message: form.message,
           subject: "New Portfolio Message",
         }),
@@ -65,15 +67,15 @@ const ContactSection = () => {
             className="space-y-6"
           >
             <p className="text-muted-foreground leading-relaxed">
-              Open to freelance projects, full-time roles, and collaboration opportunities.
-              Let us build something great together.
+              Open to Unity development roles, mobile game projects, and collaboration
+              opportunities. Let us build something great together.
             </p>
             <div className="space-y-4">
               {[
-                { icon: Phone, label: "0320 0429141", href: "tel:+923200429141" },
-                { icon: Mail, label: "adeeel00744@gmail.com", href: "mailto:adeeel00744@gmail.com" },
-                { icon: Linkedin, label: "linkedin.com/in/m-adeelkhan", href: "https://www.linkedin.com/in/m-adeelkhan/" },
-                { icon: Github, label: "github.com/Balongi", href: "https://github.com/Balongi" },
+                { icon: Mail, label: CONTACT_EMAIL, href: `mailto:${CONTACT_EMAIL}` },
+                { icon: Linkedin, label: "linkedin.com/in/waleed-tahir-6151471a2", href: "https://www.linkedin.com/in/waleed-tahir-6151471a2/" },
+                { icon: Github, label: "github.com/Spectre1099", href: "https://github.com/Spectre1099" },
+                { icon: Mail, label: "Portfolio", href: "https://mobile-carlotta-fy3b5b36.dcms.site/" },
               ].map((link) => (
                 <a
                   key={link.label}

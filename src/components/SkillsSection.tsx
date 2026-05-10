@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
 
 const skills = [
-  "Gameplay Programming: C#, C++, Lua",
-  "Multiplayer: Photon PUN 2, FishNet, PlayFab",
-  "Performance Optimization & Profiling",
-  "Game Systems Architecture (SOLID Principles)",
-  "UI/UX Implementation (Unity UI)",
-  "Version Control: Git, GitHub",
-  "Engines: Unity, Defold",
+  "Gameplay Programming: Unity, C#",
+  "Game Optimization & Profiling",
+  "AI & Game Systems",
+  "UI/UX Implementation",
+  "Bug Fixing & Debugging",
+  "Version Control: Git, SVN",
+  "Clean & Modular Code Practices",
+  "Ads, Analytics & Live Ops Integration",
+  "Core Game Metrics: Retention, DAU, Impressions, CPI",
 ];
 
 const SkillsSection = () => {

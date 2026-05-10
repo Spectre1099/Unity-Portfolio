@@ -7,11 +7,6 @@ import hexaSort from "@/assets/Hexa Sort Color Stack Merge.png";
 import monsterTruck from "@/assets/Monster Truck Derby Games.jpg";
 import rocketCar from "@/assets/Rocket Car Car Ball Games.jpg";
 import snake2048 from "@/assets/snake.io 2048.jpg";
-import usBus from "@/assets/US Bus Simulator Driving Game.jpg";
-import taxi from "@/assets/Taxi.png";
-import snowMobile from "@/assets/Snow mobile.png";
-import carParking from "@/assets/car parking.png";
-import wildAnimal from "@/assets/wild animal.png";
 
 export type Project = {
   id: string;
@@ -31,284 +26,185 @@ export type Project = {
 
 export const categories = [
   "All",
-  "Strategy",
-  "Multiplayer",
   "Casual",
-  "Racing",
   "Action",
-  "FPS",
-  "Simulation",
-  "Vehicle",
+  "Horror",
+  "Shooter",
+  "Racing",
+  "AI",
+  "Mobile",
   "Android",
-  "iOS",
 ];
 
-const studioContributions = [
-  "Gameplay programming and systems implementation in Unity.",
-  "Performance profiling and optimization for mobile builds.",
-  "Collaboration with designers to iterate on mechanics and UX.",
+const gameplayContributions = [
+  "Implemented gameplay systems and interaction mechanics in Unity and C#.",
+  "Built modular UI, AI, and game flow systems for production use.",
+  "Debugged, profiled, and optimized mobile performance for stable releases.",
 ];
 
-const studioFeatures = [
-  "Mobile-first controls and UI flow.",
-  "Polished gameplay feedback with effects and audio.",
-  "Optimized build size and load times.",
+const gameplayFeatures = [
+  "Mobile-first controls and responsive gameplay feedback.",
+  "Production-ready systems built with clean, reusable code.",
+  "Optimized runtime behavior for low- and mid-range Android devices.",
 ];
 
-const studioChallenges = [
-  "Balancing performance and visual quality across target devices.",
-  "Rapid iteration cycles under production timelines.",
-  "Maintaining stability during feature growth.",
+const gameplayChallenges = [
+  "Maintaining stable performance while adding gameplay features and polish.",
+  "Building reusable systems that support fast iteration across game genres.",
+  "Resolving critical gameplay issues without disrupting production timelines.",
 ];
 
 export const projects: Project[] = [
   {
-    id: "clash-of-towers",
-    title: "Clash of Towers",
+    id: "slice-it-cut-them-all",
+    title: "Slice It: Cut Them All",
     description:
-      "Fast-paced strategy game where you capture towers, outsmart rivals, and dominate battlefields in offline or real-time multiplayer matches.",
-    image: clashOfTowers,
-    categories: ["Strategy", "Multiplayer", "Android"],
+      "Mobile action project focused on slicing mechanics, responsive controls, and satisfying gameplay feedback.",
+    image: hexaSort,
+    categories: ["Casual", "Action", "Mobile", "Android"],
     techStack: ["Unity", "C#", "Android"],
-    role: "Unity Developer",
+    role: "Software Engineer",
     featured: true,
     overview:
-      "Clash of Towers is a tower-capture strategy experience with quick sessions and competitive pacing. Designed for both offline campaigns and real-time multiplayer play.",
-    contributions: studioContributions,
+      "Slice It: Cut Them All is a Unity mobile game project built around fast interaction, responsive player input, and polished moment-to-moment gameplay.",
+    contributions: gameplayContributions,
     features: [
-      "Offline campaigns and real-time multiplayer matches",
-      "Quick session length with competitive pacing",
-      "Tower capture and territory control mechanics",
+      "Slicing and interaction mechanics",
+      "Responsive mobile controls",
+      "Gameplay polish, debugging, and optimization",
     ],
-    challenges: studioChallenges,
-    storeUrl:
-      "https://play.google.com/store/apps/details?id=games.markhor.clashoftowers",
+    challenges: gameplayChallenges,
   },
   {
-    id: "snake-2048-io",
-    title: "Snake.io 2048",
+    id: "bot-crash-combat-arena",
+    title: "Bot Crash: Combat Arena",
     description:
-      "Combines classic snake action with 2048 merging. Collect blocks, grow stronger, and outplay rivals in a fast-paced arena.",
-    image: snake2048,
-    categories: ["Casual", "Android"],
-    techStack: ["Unity", "C#", "Android"],
-    role: "Unity Developer",
+      "Combat arena project with AI-driven opponents, physics-based encounters, and mobile performance requirements.",
+    image: clashOfTowers,
+    categories: ["Action", "AI", "Mobile", "Android"],
+    techStack: ["Unity", "C#", "AI"],
+    role: "Software Engineer",
     overview:
-      "Snake.io 2048 blends arcade snake gameplay with 2048-style merging for a tactical, competitive loop.",
-    contributions: studioContributions,
+      "Bot Crash: Combat Arena focuses on AI behavior, combat interactions, and reliable gameplay systems for mobile devices.",
+    contributions: gameplayContributions,
     features: [
-      "Arcade snake gameplay with 2048 merging",
-      "Smooth joystick controls",
-      "Endless progression and competitive play",
+      "AI opponent behavior",
+      "Combat arena gameplay flow",
+      "Physics-based interaction systems",
     ],
-    challenges: studioChallenges,
-    storeUrl:
-      "https://play.google.com/store/apps/details?id=games.markhor.snake2048.io&hl=en",
+    challenges: gameplayChallenges,
   },
   {
-    id: "demolition-derby-car-games",
-    title: "Demolition Derby: Car Games",
+    id: "agent-hunt-sniper-pro-shooter",
+    title: "Agent Hunt Sniper: Pro Shooter",
     description:
-      "High-octane derby game where you smash cars in intense arenas, customize your ride, and enjoy realistic damage.",
-    image: demolitionDerby,
-    categories: ["Casual", "Racing", "Android"],
-    techStack: ["Unity", "C#", "Android"],
-    role: "Unity Developer",
-    overview:
-      "A derby-focused driving game built around arena destruction, car customization, and multiple play modes.",
-    contributions: studioContributions,
-    features: [
-      "Arena-based demolition gameplay",
-      "Vehicle customization and upgrade loop",
-      "Multiple modes with realistic damage feedback",
-    ],
-    challenges: studioChallenges,
-    storeUrl:
-      "https://play.google.com/store/apps/details?id=com.fungames.demolition.derby.cargame",
-  },
-  {
-    id: "rocket-car-car-ball-games",
-    title: "Rocket Car: Car Ball Games",
-    description:
-      "Rocket-powered cars meet fast soccer action with stunts, abilities, and competitive arenas.",
-    image: rocketCar,
-    categories: ["Vehicle", "Racing", "Android"],
-    techStack: ["Unity", "C#", "Android"],
-    role: "Unity Developer Intern",
-    overview:
-      "A high-speed car ball game featuring aerial stunts, special abilities, and arcade-friendly controls.",
-    contributions: studioContributions,
-    features: [
-      "Rocket-powered driving and stunt mechanics",
-      "Arena-based scoring and match flow",
-      "Customization and progression systems",
-    ],
-    challenges: studioChallenges,
-    storeUrl:
-      "https://play.google.com/store/apps/details?id=com.playgtgames.studios.rocket.car.car.ball.games",
-  },
-  {
-    id: "monster-truck-derby-games",
-    title: "Monster Truck: Derby Games",
-    description:
-      "Explosive demolition action with monster trucks across stunt, race, and survival modes.",
-    image: monsterTruck,
-    categories: ["Vehicle", "Android"],
-    techStack: ["Unity", "C#", "Android"],
-    role: "Unity Developer",
-    overview:
-      "Monster Truck: Derby Games focuses on heavy-vehicle handling, high-impact collisions, and multi-mode gameplay.",
-    contributions: studioContributions,
-    features: [
-      "Stunt, race, and survival modes",
-      "Heavy vehicle handling and impacts",
-      "Destruction-driven progression loop",
-    ],
-    challenges: studioChallenges,
-    storeUrl:
-      "https://play.google.com/store/apps/details?id=com.play.extreme.monstertruck.derby.cargames",
-  },
-  {
-    id: "assassin-hunter-3d-game",
-    title: "Assassin Hunter 3D Game",
-    description:
-      "Fast-paced mobile action where you fight with knives, eliminate opponents, and complete challenges.",
+      "Shooter project involving aiming, player control, enemy behavior, and production-ready gameplay features.",
     image: assassinHunter,
-    categories: ["Action", "Android"],
+    categories: ["Shooter", "Action", "AI", "Mobile", "Android"],
     techStack: ["Unity", "C#", "Android"],
-    role: "Unity Developer",
+    role: "Software Engineer",
     overview:
-      "A mobile action game built around stealth, quick combat, and short-session progression.",
-    contributions: studioContributions,
+      "Agent Hunt Sniper: Pro Shooter is a mobile shooter project where gameplay systems, AI behavior, and responsive controls were central to the experience.",
+    contributions: gameplayContributions,
     features: [
-      "Knife-combat and takedown mechanics",
-      "Character unlocks and progression",
-      "Trap and encounter systems",
+      "Shooter gameplay systems",
+      "Enemy behavior and encounter flow",
+      "Responsive player control implementation",
     ],
-    challenges: studioChallenges,
-    storeUrl:
-      "https://play.google.com/store/apps/details?id=com.fun.games.studios.assassin.hunters.games",
+    challenges: gameplayChallenges,
   },
   {
-    id: "deadly-zombies-attack-survival",
-    title: "Deadly Zombies Attack Survival",
+    id: "bike-surfers-race-rush-3d",
+    title: "Bike Surfers: Race Rush 3D",
     description:
-      "Fight off zombies with powerful guns, upgrade weapons, and survive intense waves.",
+      "3D racing game project focused on mobile controls, fast gameplay flow, and optimized runtime performance.",
+    image: rocketCar,
+    categories: ["Racing", "Action", "Mobile", "Android"],
+    techStack: ["Unity", "C#", "Android"],
+    role: "Software Engineer",
+    overview:
+      "Bike Surfers: Race Rush 3D is a racing-focused Unity project involving player control, gameplay flow, and performance tuning for Android.",
+    contributions: gameplayContributions,
+    features: [
+      "3D racing gameplay",
+      "Mobile control systems",
+      "Performance-focused implementation",
+    ],
+    challenges: gameplayChallenges,
+  },
+  {
+    id: "clash-of-scary-squad",
+    title: "Clash of Scary Squad",
+    description:
+      "Horror/action project with modular gameplay flow, UI systems, and AI behavior support.",
     image: deadlyZombies,
-    categories: ["FPS", "Action", "iOS"],
-    techStack: ["Unity", "C#", "iOS"],
-    role: "Unity Developer",
+    categories: ["Horror", "Action", "AI", "Mobile"],
+    techStack: ["Unity", "C#"],
+    role: "Associate Software Engineer",
     overview:
-      "An iOS zombie shooter focused on wave survival, weapon progression, and fast-paced combat.",
-    contributions: studioContributions,
-    features: ["Wave-based combat", "Weapon upgrades", "Fast, responsive controls"],
-    challenges: studioChallenges,
-    storeUrl:
-      "https://apps.apple.com/ma/app/deadly-zombies-attack-survival/id1439223208",
+      "Clash of Scary Squad was a shipped project where modular UI, gameplay flow, and AI-related systems supported the production pipeline.",
+    contributions: gameplayContributions,
+    features: gameplayFeatures,
+    challenges: gameplayChallenges,
   },
   {
-    id: "construction-simulator-3d-game",
-    title: "Construction Simulator 3D Game",
+    id: "bombs-away-survive-or-die",
+    title: "Bombs Away: Survive Or Die",
     description:
-      "Operate heavy machinery to build roads and bridges for a modern city in 3D.",
+      "Survival action game project involving gameplay flow, polish, and critical issue resolution.",
+    image: demolitionDerby,
+    categories: ["Action", "Casual", "Mobile"],
+    techStack: ["Unity", "C#"],
+    role: "Associate Software Engineer",
+    overview:
+      "Bombs Away: Survive Or Die is a survival-focused Unity project that involved production stability, gameplay polish, and system-level debugging.",
+    contributions: gameplayContributions,
+    features: gameplayFeatures,
+    challenges: gameplayChallenges,
+  },
+  {
+    id: "last-bomber-standing",
+    title: "Last Bomber Standing",
+    description:
+      "Casual action project built around gameplay systems, meta-game flow, and mobile polish.",
+    image: monsterTruck,
+    categories: ["Casual", "Action", "Mobile"],
+    techStack: ["Unity", "C#"],
+    role: "Associate Software Engineer",
+    overview:
+      "Last Bomber Standing is a casual action project where modular systems supported gameplay flow, polish, and iteration.",
+    contributions: gameplayContributions,
+    features: gameplayFeatures,
+    challenges: gameplayChallenges,
+  },
+  {
+    id: "amelie-and-the-lost-spirits",
+    title: "Amelie And The Lost Spirits",
+    description:
+      "Horror-adventure project supported by UI polish, gameplay systems, and production bug fixing.",
     image: constructionSimulator,
-    categories: ["Strategy", "iOS"],
-    techStack: ["Unity", "C#", "iOS"],
-    role: "Unity Developer",
+    categories: ["Horror", "Mobile"],
+    techStack: ["Unity", "C#"],
+    role: "Associate Software Engineer",
     overview:
-      "A construction simulation built for iOS with large vehicles, mission flow, and progression.",
-    contributions: studioContributions,
-    features: ["Heavy machinery operation", "City-building missions", "3D simulation flow"],
-    challenges: studioChallenges,
-    storeUrl:
-      "https://apps.apple.com/ma/app/construction-simulator-3d-game/id1137886324",
+      "Amelie And The Lost Spirits was part of the shipped project work across horror and action genres, with focus on production-ready gameplay features.",
+    contributions: gameplayContributions,
+    features: gameplayFeatures,
+    challenges: gameplayChallenges,
   },
   {
-    id: "city-car-taxi-simulator-2k23",
-    title: "City Car Taxi Simulator 2K23",
-    description: "Drive city routes, pick up passengers, and complete taxi missions.",
-    image: taxi,
-    categories: ["Simulation", "Vehicle", "iOS"],
-    techStack: ["Unity", "C#", "iOS"],
-    role: "Unity Developer",
-    overview: "A taxi driving simulation focused on city navigation, pickups, and mission flow.",
-    contributions: studioContributions,
-    features: ["City driving routes", "Passenger pickup missions", "Vehicle handling"],
-    challenges: studioChallenges,
-    storeUrl: "https://apps.apple.com/ma/app/city-car-taxi-simulator-2k23/id1561837595",
-  },
-  {
-    id: "extreme-snowmobile-racing-rush",
-    title: "Extreme Snowmobile Racing Rush",
-    description: "High-speed snowmobile racing with tight controls and icy tracks.",
-    image: snowMobile,
-    categories: ["Racing", "Vehicle", "iOS"],
-    techStack: ["Unity", "C#", "iOS"],
-    role: "Unity Developer",
-    overview: "A racing title built around snow physics, speed, and track mastery.",
-    contributions: studioContributions,
-    features: ["Fast-paced racing", "Snowmobile handling", "Progression and upgrades"],
-    challenges: studioChallenges,
-    storeUrl: "https://apps.apple.com/ma/app/extreme-snowmobile-racing-rush/id1597042605",
-  },
-  {
-    id: "advance-car-parking-master-3d",
-    title: "Advance Car Parking Master 3D",
-    description: "Precision parking challenges with progressively harder levels.",
-    image: carParking,
-    categories: ["Simulation", "Vehicle", "iOS"],
-    techStack: ["Unity", "C#", "iOS"],
-    role: "Unity Developer",
-    overview: "A parking-focused vehicle simulation emphasizing control and accuracy.",
-    contributions: studioContributions,
-    features: ["Precision parking levels", "Vehicle handling challenges", "Progressive difficulty"],
-    challenges: studioChallenges,
-    storeUrl: "https://apps.apple.com/ma/app/advance-car-parking-master-3d/id1214856083",
-  },
-  {
-    id: "wild-animals-transporter-game",
-    title: "Wild Animals Transporter Game",
-    description: "Transport wildlife across varied terrain with heavy vehicles.",
-    image: wildAnimal,
-    categories: ["Simulation", "Vehicle", "iOS"],
-    techStack: ["Unity", "C#", "iOS"],
-    role: "Unity Developer",
-    overview: "A transport simulation focused on mission-based hauling and terrain navigation.",
-    contributions: studioContributions,
-    features: ["Mission-based transport", "Terrain navigation", "Vehicle control systems"],
-    challenges: studioChallenges,
-    storeUrl: "https://apps.apple.com/ma/app/wild-animals-transporter-game/id1538914898",
-  },
-  {
-    id: "us-bus-simulator-driving-game",
-    title: "US Bus Simulator Driving Game",
+    id: "scary-stranger-3d",
+    title: "Scary Stranger 3D",
     description:
-      "Realistic bus driving with city missions, offroad routes, and immersive 3D environments.",
-    image: usBus,
-    categories: ["Simulation", "Vehicle", "Android"],
+      "3D horror project involving AI behavior, UI systems, gameplay flow, and optimization work.",
+    image: snake2048,
+    categories: ["Horror", "AI", "Mobile", "Android"],
     techStack: ["Unity", "C#", "Android"],
-    role: "Unity Developer",
+    role: "Associate Software Engineer",
     overview:
-      "A bus-driving simulation with missions, city routes, and offline play.",
-    contributions: studioContributions,
-    features: ["City missions and route driving", "Offline play", "3D environments"],
-    challenges: studioChallenges,
-    storeUrl:
-      "https://play.google.com/store/apps/details?id=com.gd.newbus.gamesfree.bus.simultor.driving.racing.freegame&hl=en_US",
-  },
-  {
-    id: "hexa-sort-color-stack-merge",
-    title: "Hexa Sort Color Stack Merge",
-    description: "Casual Unity project built for rapid prototyping and polish.",
-    image: hexaSort,
-    categories: ["Casual", "Android"],
-    techStack: ["Unity", "C#", "Android"],
-    role: "Unity Developer",
-    overview: "A mobile-focused Unity project delivered through iterative prototyping.",
-    contributions: studioContributions,
-    features: studioFeatures,
-    challenges: studioChallenges,
-    storeUrl:
-      "https://play.google.com/store/apps/details?id=games.markhor.hexasortcolorstackmerge&hl=en",
+      "Scary Stranger 3D is a horror-oriented Unity project involving gameplay flow, AI behavior support, UI implementation, and optimization.",
+    contributions: gameplayContributions,
+    features: gameplayFeatures,
+    challenges: gameplayChallenges,
   },
 ];

@@ -49,14 +49,14 @@ const HeroSection = () => {
           className="text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tighter leading-[1.05]"
         >
           Muhammad{" "}
-          <span className="text-gradient">Adeel Khan</span>
+          <span className="text-gradient">Waleed Tahir</span>
         </MotionH1>
 
         <MotionP
           {...(!reduceMotion ? motionProps(0.2) : {})}
           className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed"
         >
-          Game Developer - Unity, Simulation, Casual. Mobile and Cross platform.
+          Software Engineer - Unity Developer. Gameplay systems, AI, mobile games, and optimization.
         </MotionP>
 
         <MotionDiv
@@ -71,7 +71,7 @@ const HeroSection = () => {
             <ArrowDown size={16} strokeWidth={1.5} className="group-hover:translate-y-0.5 transition-transform" />
           </a>
           <a
-            href="https://drive.google.com/file/d/1O_mZ6ounNv1KdOMIvf3X8d-NN2ufX_Py/view?usp=sharing"
+            href="https://drive.google.com/file/d/1w2-Xruk2ZuCN7jCYMMjMOV7y-7ATECc7/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 surface-elevated rounded-xl font-medium text-sm text-foreground hover:bg-secondary transition-all active:translate-y-px"
@@ -93,7 +93,7 @@ const HeroSection = () => {
           className="mt-8 flex flex-wrap gap-3"
         >
           <a
-            href="https://www.linkedin.com/in/m-adeelkhan/"
+            href="https://www.linkedin.com/in/waleed-tahir-6151471a2/"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-secondary text-secondary-foreground hover:bg-primary/10 transition-all"
@@ -102,7 +102,7 @@ const HeroSection = () => {
             LinkedIn
           </a>
           <a
-            href="https://github.com/Balongi"
+            href="https://github.com/Spectre1099"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider bg-secondary text-secondary-foreground hover:bg-primary/10 transition-all"

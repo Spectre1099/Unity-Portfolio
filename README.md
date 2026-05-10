@@ -1,6 +1,6 @@
-# Adeel's Game Dev Studio
+# Muhammad Waleed Tahir Portfolio
 
-This is a front-end web project for a game-dev studio site. It is built with Vite + React + TypeScript and a modern UI stack.
+This is a front-end portfolio site for Muhammad Waleed Tahir, a Software Engineer and Unity Developer. It is built with Vite + React + TypeScript and a modern UI stack.
 
 ## Tech Stack
 
@@ -51,12 +51,6 @@ git commit -m "Initial commit"
 git remote add origin https://github.com/<your-username>/<your-repo>.git
 git branch -M main
 git push -u origin main
-```
-
-If Git shows a "dubious ownership" warning, run:
-
-```bash
-git config --global --add safe.directory "D:/Github Unity Projects/New folder/adeel-s-game-dev-studio"
 ```
 
 ## Deploy (Optional)

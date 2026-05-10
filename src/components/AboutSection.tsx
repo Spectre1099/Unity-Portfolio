@@ -5,17 +5,17 @@ const highlights = [
   {
     icon: Trophy,
     title: "Gameplay Systems",
-    description: "Designs clean, modular gameplay architectures that scale with production needs.",
+    description: "Builds modular gameplay, UI, AI, and interaction systems for production games.",
   },
   {
     icon: Zap,
     title: "Performance Focus",
-    description: "Profiles, optimizes, and stabilizes gameplay for mobile and cross-platform targets.",
+    description: "Optimizes CPU, memory, and Android performance for smooth mobile gameplay.",
   },
   {
     icon: Target,
-    title: "Multiplayer Ready",
-    description: "Experience integrating Photon, Fishnet, and PlayFab for online gameplay.",
+    title: "Production Ready",
+    description: "Ships polished features from prototype to release in collaborative Agile teams.",
   },
 ];
 
@@ -42,14 +42,15 @@ const AboutSection = () => {
             className="lg:col-span-3 space-y-6"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Gameplay Programmer and Unity Developer with 4+ years of experience building
-              scalable gameplay systems for mobile and cross-platform games. Specialized in
-              C#, gameplay architecture, multiplayer systems, and performance optimization.
+              Unity Developer with 3+ years of experience developing and shipping real-time
+              interactive mobile applications using Unity and C#. Skilled in gameplay systems,
+              AI behaviors, physics-based mechanics, performance optimization, and scalable
+              architecture.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Experienced across casual, simulation, racing, and multiplayer genres, with
-              working knowledge of Defold and Lua. I enjoy solving challenging technical
-              problems and building production-ready systems that scale with live content.
+              Experienced in building production-ready features from prototype to release,
+              including modular gameplay, UI, enemy behavior, interaction mechanics, debugging,
+              profiling, object pooling, ads, analytics, and live ops integration.
             </p>
           </motion.div>
 
